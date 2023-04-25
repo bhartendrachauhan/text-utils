@@ -4,7 +4,7 @@ import About from './components/About';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar'
 import TextForm from './components/TextForm'
-import {HashRouter as Router,
+import {
   Routes,
   Route
 } from 'react-router-dom'
@@ -34,7 +34,6 @@ function App() {
     }
   }
   return (
-    <Router>
       <React.Fragment>
         <Navbar title="TextUtils" mode={mode} toggleMode = {toggleMode}/>
         <div style={{height:'50px'}}>
@@ -45,7 +44,6 @@ function App() {
           <Route exact path='/' element={<TextForm heading="Enter the text to analyze" mode={mode} showAlert={showAlert}/>}/>
         </Routes>
       </React.Fragment>
-    </Router>
   )
 }
 
